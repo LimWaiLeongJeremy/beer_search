@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Breweries Search</title>
+    </head>
+    <body>
+        <h1>Search for categories</h1>
+        <form action="/style" method="get">
+           <table>
+                <tr>
+                    <td>
+                        <h2>Select your categories: </h2>
+                    </td>
+                    <td> 
+                        <select name="beer_cat">
+                            <option data-th-each="i : ${cat}" data-th-value="${i.id}" data-th-text="${i.catName}">
+                            </option>
+                        </select>
+                        <!-- <h1 data-th-text="${i.id}">id</h1> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Search</button></td>
+                </tr>  
+           </table>
+        </form>
+    </body>
+</html>

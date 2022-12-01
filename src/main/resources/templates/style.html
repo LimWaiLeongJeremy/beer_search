@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search for style</title>
+    </head>
+    <body>
+        <h1>Search for style</h1>
+        <form action="/brewries" method="get">
+           <table>
+                <tr>
+                    <td>
+                        <h2>Select your style: </h2>
+                    </td>
+                    <td> 
+                        <select name="style_id">
+                            <option data-th-each="i : ${style}" data-th-value="${i.id}" data-th-text="${i.styleName}">
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Search</button></td>
+                </tr>  
+           </table>
+        </form>
+    </body>
+</html>
