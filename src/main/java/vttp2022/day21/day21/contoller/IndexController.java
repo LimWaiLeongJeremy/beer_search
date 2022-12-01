@@ -19,6 +19,7 @@ public class IndexController {
 
     @GetMapping
     public String catSearch(Model model){
+        System.out.println("here");
         List<Categories> catList = catSrc.getCat();
         model.addAttribute("cat", catList);
         return "index";
